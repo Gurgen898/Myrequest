@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flashing Image and MP3</title>
+  <style>
+    /* Basic style for the page */
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: white;
+      transition: background-color 0.1s ease-in-out;
+    }
+
+    .content {
+      text-align: center;
+    }
+
+    img {
+      width: 400px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    audio {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <img src="a32sdq.jpg" alt="Image" id="image">
+    <audio controls id="audio" autoplay>
+      <source src="audio.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+
+  <script>
+    // Function to make the background flash between black and white
+    let flashInterval = setInterval(() => {
+      let currentColor = document.body.style.backgroundColor;
+      document.body.style.backgroundColor = currentColor === 'white' ? 'black' : 'white';
+    }, 100); // Change background every 100ms (flash fast)
+
+  </script>
+</body>
+</html>
